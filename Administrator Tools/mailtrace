@@ -1,0 +1,59 @@
+#! /bin/sh
+
+# Script to get a list of maillog lines for emails by from address and/or to address
+#
+# This is a very quick hack. I know the grep commands are not well done. They will return more than
+# the matching emails. But they should include all the correct ones. My typical usage is to check
+# whether the logs show a particular email passing through and it's status
+
+# Check for arguments, If there are none, print usage instructions. Command line args are $1, $2, $3.
+if [ "$1" == "" ]; then
+    echo ""
+    echo "Usage:  ./mailtrace fromemail [toemail] [logfile(default=/var/log/maillog)]"
+    echo "        You may use @ as a wildcard for either address"
+    echo "        You may omit the toemail - faster than a wildcard"
+    echo "        You may use partial addresses for either"
+    echo "        The addresses are not case sensitive"
+    echo "        The optional logfile parameter must be a full path"
+    echo "        Parameters cannot contain spaces"
+    echo
+    echo " It is probably a good idea to pipe the output through a pager like less"
+    echo
+    echo "Example#>  ./mailtrace sender@yourdomain.com recipient@theirdomain.com /var/log.maillog.1"
+    echo "Example#>  ./mailtrace @ recipient@theirdomain.com | less"
+    echo "Example#>  ./mailtrace sender@yourdomain.com | less"
+    echo
+    exit
+fi
+
+# Init and assign the variables  (-z tests for empty string or uninitialised variable)
+if [ -z $1 ]; then FROM="@";                 else FROM=$1; fi     # '@' behaves as a wildcard, since every email address contains it
+if [ -z $2 ]; then TO="";              else TO=$2;   fi
+if [ -z $3 ]; then LOG="/var/log/maillog";   else LOG=$3;  fi
+
+# announce what we are about to do
+echo "Checking for mails From: $FROM  To: $TO   In logfile: $LOG"
+
+# For each $i in a list of unique sendmail queue ids with this from address
+for i in `grep from $LOG | grep -i $FROM | awk '{print $6}' | sort -u |awk -F: '{print $1}'` ;
+do
+    # If we have no To address, then simply list the emails in the from list
+    if [ "$TO" == "" ]; then
+        echo
+        echo "--------------------------------------------------------------------------------------------------------------------------------------";
+        echo "Message id: $i";
+        grep $i $LOG;
+    # If we have a To address, then we must get a new subset of logfile lines matching it
+    else
+        for j in `grep to $LOG | grep $i | grep -i $TO | awk '{print $6}' | sort -u |awk -F: '{print $1}'` ;
+        # If we find a match we will have a single element list, if not we will have an empty list
+        do
+            echo
+            echo "--------------------------------------------------------------------------------------------------------------------------------------";
+            echo "Message id: $j";
+            grep $j $LOG;
+        done
+    fi
+done
+# done
+

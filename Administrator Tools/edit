@@ -1,0 +1,26 @@
+#! /bin/bash
+# edit: Manage Editing of Files
+# Bob Holden, EAWF.COM
+# v.0.30 - 20170703 RH
+# REQUIRES: nano (replace with your favorite editor if you don't use nano)
+# ======================================
+if [ -f $1 ]; then
+ if [ -f $1.tmp ]; then
+  echo -e "\e[1m\e[31mFile being edited!\e[0m"
+  exit
+ fi
+ cp $1 $1.tmp
+ nano $1
+ diff -q $1 $1.tmp > /dev/nul
+ if [ $? -gt 0 ]; then
+  mv $1.tmp $1.$(date +"%Y%m%d%H%M")
+  echo -e "\e[1m\e[34mFile Modified.\e[0m"
+ else
+  rm $1.tmp
+  echo -e "\e[1m\e[35mFile NOT Modified.\e[0m"
+ fi
+else
+ nano $1
+fi
+# Done
+

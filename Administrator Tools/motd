@@ -1,0 +1,22 @@
+#! /bin/bash
+# motd: MOTD file manager
+# Bob Holden, EAWF.COM
+# v.1.01 - 20170701 RH
+# ============================================================
+FILE="/etc/motd"
+if [ ! -f $FILE ]; then
+ echo "# Message of the Day was missing." > $FILE
+ chmod 0644 $FILE
+fi
+cp $FILE $FILE.tmp
+nano $FILE
+diff -q $FILE $FILE.tmp > /dev/nul
+if [ $? -gt 0 ]; then
+ mv $FILE.tmp $FILE.$(date +"%Y%m%d%H%M%S")
+ echo -e "\e[1m\e[34mMOTD Modified.\e[0m"
+else
+ rm $FILE.tmp
+ echo -e "\e[1m\e[35mMOTD NOT Modified.\e[0m"
+fi
+# Done
+

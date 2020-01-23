@@ -1,0 +1,45 @@
+# Bob Holden, EAWF.COM Copyright(c)2017-2019. All rights reserved.
+# v.1.00 - 20190514(RH)
+# ================================================================
+FILE="/root/.log"
+Now=$(date +"%Y%m%d:%H:%M:%S")
+# INITIALIZE LOGFILE
+if [ ! -f $FILE ]; then
+cat <<EOF > $FILE
+System Administration Activity Log
+----------------------------------
+Timestamp         Notes/Remarks
+================= ================================================
+$Now Activity Log Initialized
+EOF
+chmod 0640 $FILE
+fi
+if [ -z $1 ]; then
+ echo
+ echo -e "\e[1m\e[34m LOG:\e[0m $version ($0)"
+ echo
+ echo -e "\e[1m\e[34m Purpose:\e[0m Log System Activity Notes/Remarks)"
+ echo
+ echo -e "\e[1m\e[34m SYNTAX:\e[0m"
+ echo " ======="
+ echo "  log [Parameter]" 
+ echo "      [null]: Display this help file"
+ echo "      [-v]: View the Log File with Less"
+ echo "      [-e]: Edit the Log File with Nano"
+ echo "      [Notes/Remarks]: Inserts Note into Logfile"
+ echo
+ exit 1
+elif [ "$1" == "-v" ]; then
+ clear
+ less $FILE
+ exit 0
+elif [ "$1" == "-e" ]; then
+ nano $FILE
+ exit 0
+else
+ Entry="${Now} ${@}"
+ sed -i "4 a ${Entry}" $FILE
+ echo "Logged"
+fi
+exit 0
+# Done

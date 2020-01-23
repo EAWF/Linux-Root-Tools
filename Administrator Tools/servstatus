@@ -1,0 +1,32 @@
+#!/bin/bash
+# NOTE: pipe stdout to less for better viewing.
+clear
+# Sample script written for Part 4 of the RHCE series
+# This script will return the following set of system information:
+# -Hostname information:
+echo -e "\e[31;34m***** SERVER INFORMATION *****\e[0m"
+date
+echo
+uname -a
+uptime
+echo 
+# -File system disk space usage:
+echo -e "\e[31;34m***** FILE SYSTEM *****\e[0m"
+df -h
+echo 
+# -Free and used memory in the system:
+echo -e "\e[31;34m ***** MEMORY *****\e[0m"
+free
+echo
+# -Logged-in users:
+echo -e "\e[31;34m***** CURRENTLY LOGGED-IN USERS *****\e[0m"
+who
+echo
+# -Processes as far as memory usage is concerned
+echo -e "\e[31;34m***** MEMORY-CONSUMING PROCESSES *****\e[0m"
+# Use top to see less information.
+ps -eo %mem,%cpu,comm --sort=-%mem
+echo
+echo -e "\e[31;32mDone.\e[0m"
+# done
+

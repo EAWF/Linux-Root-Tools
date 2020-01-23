@@ -1,0 +1,33 @@
+#! /bin/bash
+# glean: Strip comments and blank lines out of config files.
+# Bob Holden, EAWF.COM
+# Use to debug configs or speedup loading.
+# v.1.00 - 20170605 - RH
+# ============================================================
+SELF=$(basename $0)
+if [ -z $1 ]; then
+ clear
+ echo
+ echo -e "\e[1m\e[34mGLEAN\e[0m $version ($0)"
+ echo
+ echo -e "\e[1m\e[34m Purpose:\e[0m Glean(gather) working lines (not comments(#) or blank lines)"
+ echo "          from ASCII script and/or configuration files."
+ echo
+ echo -e "\e[1m\e[34m SYNTAX:\e[0m"
+ echo " ======="
+ echo "  $SELF [/path/]filename[.ext]"
+ echo
+ exit 1
+fi
+
+# ======== START =========================
+if [ -s $1 ]; then
+ egrep -v '^[[:space:]]*$|^ *#' $1
+else
+ echo "Nothing to do! File: $1"
+ ls -la $1
+ exit 1
+fi
+exit 0
+# Done
+
