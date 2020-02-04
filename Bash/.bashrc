@@ -32,8 +32,8 @@
 ## I am ALWAYS forgetting to add the "-s"
 * alias curl='curl -s'
 
-## I am ALWAYS forgetting to add the "-y"
-* alias diff='diff -y'
+## I am ALWAYS forgetting to add the "-y" and supressing common lines is much more informative.
+* alias diff='diff -y --suppress-common-lines'
 
 ## Roots Mail:
 * For me, mail for root is always kept on localhost. It receives mail from lfd, rkhunter, cron, and others. Root NEVER receives mail outside being signed on locally. The default mailer for root is sendmail or it's replaced by whatever MTA you have installed, BUT, AFAIK, the command is always: mail. This default is good, BUT, I like mutt better.
