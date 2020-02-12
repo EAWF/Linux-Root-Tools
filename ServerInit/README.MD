@@ -3,7 +3,7 @@
 This sub-repository contains scripts designed for load specific server features that you may want to use on your CentOS 7 Minimal Server Installation.
 # INITIALIZATION SCRIPTS
 * **[admin](/ServerInit/admin.md)**: Handy System Administrator Tools designed to make documentation and everyday tasks easier.
-* **[firewall](/ServerInit/firewall/md)**: Setting up the CSF firewall manager.
+* **[firewall](/ServerInit/firewall.md)**: Setting up the CSF firewall manager.
 * **[init](/ServerInit/init.md)**: Initial Installation and upgrades.
 # DATABASES
 **_NOTE: Set your databases up **BEFORE** running the webserver script so that the modules will correctly load into your server._**
