@@ -2,14 +2,14 @@
 
 This sub-repository contains scripts designed for load specific server features that you may want to use on your CentOS 7 Minimal Server Installation.
 # INITIALIZATION SCRIPTS
-* **[init](/ServerInit/init)**: Initial Installation and upgrades.
-* **[firewall](/ServerInit/firewall)**: Setting up the CSF firewall manager.
-* **[admin](/ServerInit/admin)**: Handy System Administrator Tools designed to make documentation and everyday tasks easier.
+* **[admin](/ServerInit/admin.md)**: Handy System Administrator Tools designed to make documentation and everyday tasks easier.
+* **[firewall](/ServerInit/firewall/md)**: Setting up the CSF firewall manager.
+* **[init](/ServerInit/init.md)**: Initial Installation and upgrades.
 # DATABASES
 **_NOTE: Set your databases up **BEFORE** running the webserver script so that the modules will correctly load into your server._**
+* **SQLite3**: Fully usable SQL without the overhead of a constantly running server daemon...SQL on demand.
 * **MariaDB**: Open source replacement for MySQL, but works the same.
 * **PostgreSQL**: Rock solid, full featured DB Server, with less attack vectors
-* **SQLite3**: Fully usable SQL without the overhead of a constantly running server daemon...SQL on demand.
 # MAIL SERVERS & FEATURES
 ## MTA's
 * **Sendmail**: The tried and true default eMail system 
