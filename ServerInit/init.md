@@ -1,4 +1,5 @@
-# init: CentOS7 Initial Installation Script to be run immediately on completion of install.
+# CentOS7 Initialization Script
+Run this on a new CentOS 7 Minimal Install
 ```bash
 yum -y upgrade
 yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
