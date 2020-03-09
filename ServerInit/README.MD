@@ -12,11 +12,10 @@ This sub-repository contains scripts designed for load specific server features 
 * **SQLite3**: Fully usable SQL without the overhead of a constantly running server daemon...SQL on demand.
 * **MariaDB**: Open source replacement for MySQL, but works the same.
 * **PostgreSQL**: Rock solid, full featured DB Server, with less attack vectors
-# MAIL SERVERS & FEATURES
+# MAIL SERVER & FEATURES
 ## MTA's
-* **Sendmail**: The tried and true default eMail system 
 * **Postfix**: The replacement for Sendmail. Easier to manage
 ## WEBMAIL
-* **Roundcube**: Professional looking basic web eMail. Don't look for fancy features here...just the basics.
+* **TBA**:
 # WEBSERVER
 * **webserver**: Basic packages to set up Apache2
