@@ -5,4 +5,5 @@ yum -y install man mlocate nano net-tools rsyslog sudo which whois ImageMagick v
 yum -y install perl perl-GDGraph perl-libwww-perl.noarch perl-LWP-Protocol-https.noarch
 yum -y install mutt swaks rkhunter curl wget file expect htop
 yum -y update
+echo
 ```
