@@ -1,7 +1,6 @@
 #!/bin/bash
 # EAWF CentOS7 Initialization Script
 # Run this on a new CentOS 7 Minimal Install
-yum -y upgrade
 yum-config-manager --enable rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional
 yum -y install epel-release yum-utils
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
