@@ -1,5 +1,6 @@
 # SSHD Configuration:
 * Make the following changes to /etc/ssh/sshd_config
+  - Port 2222 
   - PubkeyAuthentication yes
   - PasswordAuthentication no
   - ChallengeResponseAuthentication no
