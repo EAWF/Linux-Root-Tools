@@ -1,8 +1,8 @@
 #! /bin/bash
 # edit: Manage Editing of Files
 # Bob Holden, EAWF.COM
-# v.0.30 - 20170703 RH
-# REQUIRES: nano (replace with your favorite editor if you don't use nano)
+# v.0.40 - 20201111 RH
+# REQUIRES: ${EDITOR} set up with your favorite editor in .bashrc
 # ======================================
 if [ -f $1 ]; then
  if [ -f $1.tmp ]; then
@@ -10,7 +10,7 @@ if [ -f $1 ]; then
   exit
  fi
  cp $1 $1.tmp
- nano $1
+ ${EDITOR} $1
  diff -q $1 $1.tmp > /dev/nul
  if [ $? -gt 0 ]; then
   mv $1.tmp $1.$(date +"%Y%m%d%H%M")
@@ -20,7 +20,7 @@ if [ -f $1 ]; then
   echo -e "\e[1m\e[35mFile NOT Modified.\e[0m"
  fi
 else
- nano $1
+ ${EDITOR} $1
 fi
 # Done
 
