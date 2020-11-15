@@ -62,6 +62,8 @@ ssl_cert = [location of your cert]
 systemctl enable dovecot
 systemctl start dovecot
 ```
+* Test
+
 ### ClamAV
 * Edit configuration files and start ClamAV system
 ```bash
@@ -72,12 +74,7 @@ freshclam
 systemctl enable clamd@scan
 systemctl start clamd@scan
 ```
-## Base Tests
-### Postfix
-### Dovecot
-### ClamAV
-### Spamassassin
 
-## Roundcube Installation, Configuration & Testing
+### Roundcube Installation, Configuration & Testing
 
-## Mailman Installation, Configuration & Testing
+### Mailman Installation, Configuration & Testing
