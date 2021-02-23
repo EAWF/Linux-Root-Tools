@@ -1,3 +1,5 @@
+# This script does not support PHP 8+, which requires using dnf to update.  Will update this code sometime soon.  RH
+
 #!/bin/bash
 # EAWF CentOS7 Initialization Script
 # Run this on a new CentOS 7 Minimal Install
