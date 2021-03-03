@@ -6,5 +6,6 @@ yum-config-manager --enable remi-php80
 yum -y install php php-common php-pecl-mcrypt php-cli php-gd php-curl php-mysqlnd php-ldap php-zip php-fileinfo php-gmp php-base58 php-ev
 dnf -y upgrade
 php -v
+php -m
 echo
 ```
