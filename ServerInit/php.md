@@ -7,5 +7,4 @@ yum -y install php php-common php-pecl-mcrypt php-cli php-gd php-curl php-mysqln
 dnf -y upgrade
 php -v
 php -m
-echo
 ```
