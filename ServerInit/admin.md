@@ -1,4 +1,4 @@
-# Basic Admin tools
+# Install Basic Admin tools
 ```bash
 yum -y install bind-utils cronie gcc ipset iptables-services lynx make e2fsprogs gd
 yum -y install man mlocate nano net-tools rsyslog sudo which whois ImageMagick vim
