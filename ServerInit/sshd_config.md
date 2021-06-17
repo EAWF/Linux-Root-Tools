@@ -8,5 +8,7 @@
   - PermitRootLogin no 
   - Banner /etc/warning (You will need to create this file)
 * Save the file and then run:
-  - systemctl restart sshd
-  - systemctl status sshd
+```bash
+ systemctl restart sshd
+ systemctl status sshd
+```
