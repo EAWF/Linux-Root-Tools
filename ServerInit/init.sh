@@ -8,6 +8,4 @@ yum -y install epel-release yum-utils
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum -y install centos-release-scl.noarch
 yum -y upgrade
-yum -y install dnf
-dnf -u
 ```
