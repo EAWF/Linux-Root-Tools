@@ -1,6 +1,7 @@
 # Installing PHP 7 on CentOS 7
 ```bash
 yum-config-manager --enable remi-php74
+scl enable php74 bash
 yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm && yum clean all
 yum -y install php php74-php-{base58,bcmath,common,cli,curl,devel,fpm,gd,gmp,mbstring,mysqlnd,opcache,pear,json,mcrypt,pdo,xml,zip}
 ```
