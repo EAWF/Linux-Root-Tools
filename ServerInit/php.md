@@ -7,10 +7,12 @@ yum -y install php php74-php-{base58,bcmath,common,cli,curl,devel,fpm,gd,gmp,mbs
 # Changing system to run php74 instead of php54
 - This is needed to run php7.4 on your system as default.
 ```bash
+php -v
 cd /usr/bin
 cp php php54
 rm php
 ln -s php74 php
+php -v
 ```
 - To change back, just do the reverse.
  
