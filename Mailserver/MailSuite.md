@@ -74,7 +74,3 @@ freshclam
 systemctl enable clamd@scan
 systemctl start clamd@scan
 ```
-
-### Roundcube Installation, Configuration & Testing
-
-### Mailman Installation, Configuration & Testing
