@@ -1,4 +1,4 @@
-# CentOS 7.x Mail Server Suite Installation Script and Configuration
+# Postfix Mail Server Suite Installation Script and Configuration
 ## Notes
 * Procedure assumes you are root. If you need sudo access, type ```sudo -``` and enter the root password to become root.
 * The ***Edit*** program requires that you have installed the [Edit](https://github.com/EAWF/Linux-Root-Tools/blob/master/Administrator%20Tools/edit) script found in this repository.
