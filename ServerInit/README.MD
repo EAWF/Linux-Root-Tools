@@ -1,4 +1,4 @@
-# CentOS7 Minimal Server Initialization Scripts
+# Minimal Server Initialization Scripts
 
 This sub-repository contains scripts designed for load specific server features that you may want to use on your CentOS 7 Minimal Server Installation.
 # INITIALIZATION SCRIPTS
@@ -16,6 +16,6 @@ This sub-repository contains scripts designed for load specific server features 
 ## MTA's
 * **Postfix**: The replacement for Sendmail. Easier to manage
 ## WEBMAIL
-* **TBA**:
+* **RainLoop**: Good Remote Mail Server, easy to install, just remember to change the admin password IMMEDIATELY!
 # WEBSERVER
 * **webserver**: Basic packages to set up Apache2
