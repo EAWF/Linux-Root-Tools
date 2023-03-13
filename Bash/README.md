@@ -1,7 +1,7 @@
 # Bash Environment Setup
 ## **TLDR;**
 The files are read in the following order when you open a new bash shell session:
-1. **[~/.bashrc](Bash/.bashrc)** (first)
+1. **[~/.bashrc]()** (first)
 2. **~/.bash_aliases** (second)
 3. **.bash_profile** (third)
 4. **.bash_logout** (on exit)
