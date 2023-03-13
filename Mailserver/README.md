@@ -1,4 +1,4 @@
-# Mailserver Suite for CentOS 7 Minimal Install on VPS
+# Mailserver Suite Minimal Install on VPS
 ## Concept:
 * Self-Owned/Controlled eMail For Small Business
 
