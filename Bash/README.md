@@ -1,10 +1,10 @@
 # Bash Environment Setup
 ## **TLDR;**
 The files are read in the following order when you open a new bash shell session:
-1. **[.bash_profile]()**
-2. **[.bashrc]()**
-3. **[.bash_aliases]()**
-4. **[.bash_logout]()**
+1. **[.bash_profile](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/README.md#bash_profile)**
+2. **[.bashrc](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/README.md#bashrc)**
+3. **[.bash_aliases](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/README.md#bash_aliases)**
+4. **[.bash_logout](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/README.md#bash_logout)**
 
 ## Documentation: 
 ### **/etc/profile**:
