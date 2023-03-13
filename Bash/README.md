@@ -2,9 +2,9 @@
 ## **TLDR;**
 The files are read in the following order when you open a new bash shell session:
 1. **[~/.bashrc](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/.bashrc)** (first)
-2. **~/.bash_aliases** (second)
-3. **.bash_profile** (third)
-4. **.bash_logout** (on exit)
+2. **[~/.bash_aliases](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/.bash_aliases)** (second)
+3. **[~/.bash_profile](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/.bash_profile)** (third)
+4. **[~/.bash_logout](https://github.com/EAWF/Linux-Root-Tools/blob/master/Bash/.bash_logout)** (on exit)
 
 ## Documentation: 
 ### **/etc/profile**:
