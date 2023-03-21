@@ -26,5 +26,3 @@ alias sqlite='sqlite3'
 # alias htmlerr='tail -f -n20 /var/log/httpd/error_log'
 alias timestamp='date +%s'
 alias ttd='nano ~/.ttd'
-
-export EDITOR='nano -c'
